@@ -28,14 +28,14 @@ const Hero = () => {
               <Button 
                 onClick={handleTestClick}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                Hacer el test gratis
+                🚀 Hacer el test gratis
               </Button>
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+                className="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-4 text-lg font-semibold rounded-2xl transition-all duration-300"
                 onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Ver cómo funciona
@@ -60,20 +60,23 @@ const Hero = () => {
 
           <div className="flex justify-center animate-fade-in animate-delay-200">
             <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center">
-                <div className="w-64 h-64 bg-white rounded-full shadow-xl flex items-center justify-center">
+              <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/15 rounded-full flex items-center justify-center shadow-2xl">
+                <div className="w-64 h-64 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-primary/20">
                   <div className="text-center">
                     <div className="text-6xl font-bold gradient-text mb-2">94%</div>
-                    <div className="text-gray-600 font-medium">Compatible</div>
+                    <div className="text-gray-700 font-semibold text-lg">Compatible</div>
                     <div className="text-sm text-gray-500 mt-2">con tu roomie ideal</div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/80 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-2xl">🏠</span>
+              <div className="absolute -top-4 -right-4 w-20 h-20 youth-gradient rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+                <span className="text-3xl">🏠</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/80 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-2xl">👥</span>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+                <span className="text-3xl">👥</span>
+              </div>
+              <div className="absolute top-8 -left-8 w-16 h-16 bg-primary/30 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-2xl">✨</span>
               </div>
             </div>
           </div>
