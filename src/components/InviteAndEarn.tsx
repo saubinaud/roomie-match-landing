@@ -46,7 +46,7 @@ const InviteAndEarn = () => {
   const progressPercentage = (inviteCount / 3) * 100;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+    <section className="py-20 bg-gradient-to-br from-primary/8 to-accent/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -71,7 +71,7 @@ const InviteAndEarn = () => {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
                       <div 
-                        className="h-full bg-gradient-to-r from-primary to-green-600 rounded-full transition-all duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${progressPercentage}%` }}
                       ></div>
                     </div>
@@ -93,25 +93,25 @@ const InviteAndEarn = () => {
                 </div>
 
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-primary to-green-600 rounded-2xl p-8 text-white">
+                  <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-8 text-white">
                     <div className="text-4xl mb-4">🎁</div>
                     <h4 className="text-xl font-bold mb-2">Informe Premium</h4>
                     <p className="text-primary-foreground/90 mb-4">Valor regular: €3</p>
                     <ul className="text-left text-sm space-y-2">
                       <li className="flex items-center gap-2">
-                        <span className="text-accent">✓</span>
+                        <span className="text-white">✓</span>
                         Análisis profundo de compatibilidad
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-accent">✓</span>
+                        <span className="text-white">✓</span>
                         Consejos personalizados de convivencia
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-accent">✓</span>
+                        <span className="text-white">✓</span>
                         Estrategias para resolver conflictos
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-accent">✓</span>
+                        <span className="text-white">✓</span>
                         Recomendaciones de acuerdos de casa
                       </li>
                     </ul>

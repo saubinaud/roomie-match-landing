@@ -60,8 +60,8 @@ const Hero = () => {
 
           <div className="flex justify-center animate-fade-in animate-delay-200">
             <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
-                <div className="w-64 h-64 bg-white rounded-full shadow-2xl flex items-center justify-center">
+              <div className="w-80 h-80 bg-gradient-to-br from-primary/15 to-accent/10 rounded-full flex items-center justify-center">
+                <div className="w-64 h-64 bg-white rounded-full shadow-xl flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-6xl font-bold gradient-text mb-2">94%</div>
                     <div className="text-gray-600 font-medium">Compatible</div>
@@ -69,10 +69,10 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/80 rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-2xl">🏠</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/80 rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-2xl">👥</span>
               </div>
             </div>
