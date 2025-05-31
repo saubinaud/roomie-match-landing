@@ -14,24 +14,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 18% 12%;
 
-    --primary: 45 75% 62%;
+    --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 20% 96%;
+    --secondary: 220 14% 96%;
     --secondary-foreground: 210 18% 12%;
 
-    --muted: 43 20% 96%;
+    --muted: 220 14% 96%;
     --muted-foreground: 215 13% 34%;
 
-    --accent: 358 76% 69%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 210 18% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 45 75% 62%;
+    --ring: 142 76% 36%;
 
     --radius: 0.75rem;
 
@@ -52,19 +52,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 210 18% 12%;
     --popover-foreground: 210 40% 98%;
-    --primary: 45 75% 62%;
+    --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 358 76% 69%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 210 18% 12%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 45 75% 62%;
+    --ring: 142 76% 36%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -92,19 +92,11 @@
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(238, 187, 81, 0.15) 0%, rgba(255, 107, 107, 0.1) 50%, #FFFFFF 85%);
+    background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #FEF3C7 100%);
   }
   
   .glass-effect {
-    @apply bg-white/95 backdrop-blur-sm border border-white/40 shadow-lg;
-  }
-
-  .youth-gradient {
-    background: linear-gradient(135deg, #EEBB51 0%, #FF6B6B 100%);
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
   }
 }
 
@@ -118,11 +110,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary/60 rounded-full;
+  @apply bg-gray-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary;
+  @apply bg-gray-600;
 }
 
 /* Smooth scroll behavior */
