@@ -10,21 +10,14 @@ const InviteAndEarn = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Get or create share ID
-    let shareId = localStorage.getItem('rentleShareId');
-    if (!shareId) {
-      shareId = Math.random().toString(36).substr(2, 9);
-      localStorage.setItem('rentleShareId', shareId);
-    }
-    
     // Get invite count
     const storedCount = localStorage.getItem('rentleInviteCount');
     if (storedCount) {
       setInviteCount(parseInt(storedCount));
     }
 
-    // Generate share URL
-    setShareUrl(`https://rentle-match.vercel.app/?invited_by=${shareId}`);
+    // Generate simple share URL without invite codes
+    setShareUrl('https://rentle-match.vercel.app/');
   }, []);
 
   const copyInviteLink = async () => {
@@ -32,7 +25,7 @@ const InviteAndEarn = () => {
       await navigator.clipboard.writeText(shareUrl);
       toast({
         title: "¡Enlace copiado!",
-        description: "Ahora compártelo con tus amigos para desbloquear el Informe Premium",
+        description: "Ahora compártelo con tu amigo para que ambos obtengan el Informe Premium gratis",
       });
     } catch (err) {
       toast({
@@ -43,7 +36,7 @@ const InviteAndEarn = () => {
     }
   };
 
-  const progressPercentage = (inviteCount / 3) * 100;
+  const progressPercentage = (inviteCount / 1) * 100;
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
@@ -53,8 +46,8 @@ const InviteAndEarn = () => {
             Invita y gana
           </h2>
           <p className="text-xl text-gray-700 mb-12">
-            Cuando 3 personas completen el test desde tu enlace, 
-            <span className="font-bold text-primary"> desbloqueas gratis el Informe Premium</span>
+            Invita a un amigo a hacer el test y 
+            <span className="font-bold text-primary"> ambos obtienen el Informe Premium gratis</span>
           </p>
 
           <Card className="border-0 shadow-2xl overflow-hidden animate-scale-in">
@@ -67,7 +60,7 @@ const InviteAndEarn = () => {
                   <div className="mb-6">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-medium text-gray-700">Amigos invitados</span>
-                      <span className="text-sm font-bold text-primary">{inviteCount}/3</span>
+                      <span className="text-sm font-bold text-primary">{inviteCount}/1</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
                       <div 
@@ -77,7 +70,7 @@ const InviteAndEarn = () => {
                     </div>
                   </div>
                   
-                  {inviteCount >= 3 ? (
+                  {inviteCount >= 1 ? (
                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
                       <strong>¡Felicitaciones!</strong> Has desbloqueado el Informe Premium
                     </div>
@@ -87,7 +80,7 @@ const InviteAndEarn = () => {
                       size="lg"
                       className="bg-accent hover:bg-accent/90 text-gray-900 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto"
                     >
-                      📎 Copiar enlace de invitación
+                      📎 Copiar enlace para compartir
                     </Button>
                   )}
                 </div>
@@ -122,8 +115,8 @@ const InviteAndEarn = () => {
           </Card>
 
           <p className="text-gray-600 mt-8">
-            Sin códigos ni cupones externos. El enlace se activa automáticamente cuando 
-            tus 3 amigos completen el test.
+            Simplemente comparte el enlace con tu amigo. Cuando complete el test, 
+            ambos recibirán automáticamente el Informe Premium.
           </p>
         </div>
       </div>

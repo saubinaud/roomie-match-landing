@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -34,8 +33,8 @@ const FAQ = () => {
       answer: "Sí, funciona para amigos, parejas, familiares o conocidos. El algoritmo se adapta al tipo de relación que indiques al inicio del test."
     },
     {
-      question: "¿Cómo desbloqueo el Informe Premium gratis?",
-      answer: "Simplemente comparte tu enlace único con 3 amigos. Cuando ellos completen el test, automáticamente recibirás acceso al Informe Premium sin costo alguno."
+      question: "¿Cómo obtengo el Informe Premium gratis?",
+      answer: "Simplemente invita a un amigo a hacer el test compartiendo el enlace. Cuando tu amigo complete el test, ambos recibirán automáticamente acceso al Informe Premium sin costo alguno."
     }
   ];
 
