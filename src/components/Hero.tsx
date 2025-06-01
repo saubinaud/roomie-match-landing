@@ -21,7 +21,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button onClick={handleTestClick} size="lg" className="bg-[#eebb51] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105\n">
+              <Button onClick={handleTestClick} size="lg" className="bg-[#eebb51] hover:bg-[#eebb51] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-120">
                 Hacer el test gratis
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({
