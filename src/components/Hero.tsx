@@ -1,16 +1,12 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
   const handleTestClick = () => {
     const shareId = localStorage.getItem('rentleShareId') || Math.random().toString(36).substr(2, 9);
     localStorage.setItem('rentleShareId', shareId);
     window.open(`https://rentle-tli.com/roomie-mvp/index.html?share_id=${shareId}`, '_blank');
   };
-
-  return (
-    <section className="hero-gradient pt-24 pb-16 lg:pb-24">
+  return <section className="hero-gradient pt-24 pb-16 lg:pb-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in">
@@ -25,19 +21,12 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button 
-                onClick={handleTestClick}
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
+              <Button onClick={handleTestClick} size="lg" className="text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-[#eebb51]">
                 Hacer el test gratis
               </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
-                onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
                 Ver cómo funciona
               </Button>
             </div>
@@ -79,8 +68,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
