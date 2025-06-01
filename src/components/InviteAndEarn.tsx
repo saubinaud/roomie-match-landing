@@ -1,43 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
 
 const InviteAndEarn = () => {
-  const [inviteCount, setInviteCount] = useState(0);
-  const [shareUrl, setShareUrl] = useState('');
-  const { toast } = useToast();
-
-  useEffect(() => {
-    // Get invite count
-    const storedCount = localStorage.getItem('rentleInviteCount');
-    if (storedCount) {
-      setInviteCount(parseInt(storedCount));
-    }
-
-    // Generate simple share URL without invite codes
-    setShareUrl('https://rentle-match.vercel.app/');
-  }, []);
-
-  const copyInviteLink = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      toast({
-        title: "¡Enlace copiado!",
-        description: "Ahora compártelo con tu amigo para que ambos obtengan el Informe Premium gratis",
-      });
-    } catch (err) {
-      toast({
-        title: "Error",
-        description: "No se pudo copiar el enlace. Inténtalo de nuevo.",
-        variant: "destructive"
-      });
-    }
-  };
-
-  const progressPercentage = (inviteCount / 1) * 100;
-
   return (
     <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-4">
@@ -55,34 +20,28 @@ const InviteAndEarn = () => {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Tu progreso
+                    ¿Cómo funciona?
                   </h3>
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700">Amigos invitados</span>
-                      <span className="text-sm font-bold text-primary">{inviteCount}/1</span>
+                  <div className="space-y-4 text-left">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        1
+                      </div>
+                      <p className="text-gray-700">Comparte Rentle Match con tu amigo</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-primary to-green-600 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${progressPercentage}%` }}
-                      ></div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        2
+                      </div>
+                      <p className="text-gray-700">Tu amigo completa el test de compatibilidad</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        ✓
+                      </div>
+                      <p className="text-gray-700 font-semibold">¡Ambos obtienen el Informe Premium gratis!</p>
                     </div>
                   </div>
-                  
-                  {inviteCount >= 1 ? (
-                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
-                      <strong>¡Felicitaciones!</strong> Has desbloqueado el Informe Premium
-                    </div>
-                  ) : (
-                    <Button 
-                      onClick={copyInviteLink}
-                      size="lg"
-                      className="bg-accent hover:bg-accent/90 text-gray-900 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto"
-                    >
-                      📎 Copiar enlace para compartir
-                    </Button>
-                  )}
                 </div>
 
                 <div className="text-center">
@@ -115,8 +74,8 @@ const InviteAndEarn = () => {
           </Card>
 
           <p className="text-gray-600 mt-8">
-            Simplemente comparte el enlace con tu amigo. Cuando complete el test, 
-            ambos recibirán automáticamente el Informe Premium.
+            Es así de simple: comparte, que tu amigo haga el test, y ambos disfrutan del Informe Premium 
+            sin costo alguno.
           </p>
         </div>
       </div>
